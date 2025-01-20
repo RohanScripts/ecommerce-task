@@ -5,6 +5,116 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link href="./output.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jersey+15&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
   </head>
-  <body></body>
+  <body class="flex justify-center items-center bg-red-950">
+    <div class="w-[1440px] h-screen bg-white flex flex-col">
+      <!-- top header -->
+      <div
+        class="w-full h-[48px] bg-[#000000] flex justify-center items-center"
+      >
+        <div class="w-[859px] h-[24px] text-[#FAFAFA] flex justify-between">
+          <!-- left header -->
+          <div class="w-[550px] h-full flex items-center justify-between">
+            <p class="font-[400] text-[14px] leading-[21px]">
+              Summer Sale For All Swim Suits And Free Express Delivery - OFF
+              50%!
+            </p>
+            <p
+              class="font-[600] text-[14px] leading-[24px] text-center underline cursor-pointer"
+            >
+              ShopNow
+            </p>
+          </div>
+          <!-- right header -->
+          <div
+            class="w-[78px] h-full flex items-center justify-between cursor-pointer"
+          >
+            <p class="font-[400] text-[14px] leading-[21px]">English</p>
+            <img src="./assets/downArrow.png" alt="" />
+          </div>
+        </div>
+      </div>
+      <!-- header -->
+      <div
+        class="w-[1170px] h-[38px] mt-[40px] mx-[135px] mb-[16px] flex items-center justify-between"
+      >
+        <!-- left header -->
+        <div class="w-[645px] h-[24px] flex items-center justify-between">
+          <!-- logo -->
+          <div class="w=[118px] h-full">
+            <p class="font-[700] text-[24px] leading-[24px] text-[#000000]">
+              Exclusive
+            </p>
+          </div>
+          <!-- navlinks -->
+          <div
+            class="w-[367px] h-full text-[#000000] font-[400] text-[16px] leading-[24px] text-center flex gap-[48px]"
+          >
+            <p class="cursor-pointer">Home</p>
+            <p class="cursor-pointer">Contact</p>
+            <p class="cursor-pointer">About</p>
+            <p class="cursor-pointer">Sign Up</p>
+          </div>
+        </div>
+        <!-- right header -->
+        <div class="w-[395px] h-[38px] flex items-center justify-between">
+          <!-- search -->
+          <div
+            class="w-[243px] h-[48px] flex items-center justify-between bg-[#F5F5F5] py-[7px] pr-[12px] pl-[20px] gap-[10px]"
+          >
+            <input
+              type="text"
+              class="w-[153px] font-[400] text-[12px] leading-[18px] border-0 outline-none bg-[#F5F5F5]"
+              placeholder="What are you looking for?"
+            />
+            <button><img src="./assets/search.png" alt="" /></button>
+          </div>
+          <div class="w-[128px] h-[32px] flex items-center justify-between">
+            <img src="./assets/Wishlist.png" alt="" />
+            <img src="./assets/Cart1 with buy.png" alt="" />
+            <img src="./assets/user.png" alt="" />
+          </div>
+        </div>
+      </div>
+      <hr />
+      <!-- main -->
+      <main class="flex-grow"></main>
+      <footer class="w-full h-[440px] bg-[#000000]">
+        <div class="w-[1170px] h-[236px] mt-[80px] ml-[135px]">
+          <!-- exclusive -->
+          <div class="">
+            <!-- exclusive upper -->
+            <div class="flex flex-col gap-[24px]">
+              <p class="text-[#FAFAFA] font-[700] text-[24px] leading-[24px]">
+                Exclusive
+              </p>
+              <p class="font-[500] text-[20px] leading-[28px] text-[#FAFAFA]">
+                Subscribe
+              </p>
+              <p class="text-[#FAFAFA] font-[400] text-[16px]">
+                Get 10% off your first order
+              </p>
+            </div>
+            <!-- exclusive lower -->
+            <div
+              class="w-[217px] h-[48px] rounded-[4px] border-[1.5px] text-[#FAFAFA]"
+            >
+              <input
+                type="email"
+                placeholder="Enter your email"
+                class="outline-none border-0 bg-[#000000] w-[130px]"
+              />
+              <button><img src="./assets/send.png" alt="" /></button>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
 </html>
