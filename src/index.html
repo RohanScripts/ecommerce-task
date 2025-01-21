@@ -12,8 +12,8 @@
       rel="stylesheet"
     />
   </head>
-  <body class="flex justify-center items-center bg-red-950">
-    <div class="w-[1440px] h-screen bg-white flex flex-col">
+  <body class="flex justify-center items-center">
+    <div class="w-full h-screen bg-white flex flex-col">
       <!-- top header -->
       <div
         class="w-full h-[48px] bg-[#000000] flex justify-center items-center"
@@ -41,80 +41,230 @@
         </div>
       </div>
       <!-- header -->
-      <div
-        class="w-[1170px] h-[38px] mt-[40px] mx-[135px] mb-[16px] flex items-center justify-between"
-      >
-        <!-- left header -->
-        <div class="w-[645px] h-[24px] flex items-center justify-between">
-          <!-- logo -->
-          <div class="w=[118px] h-full">
-            <p class="font-[700] text-[24px] leading-[24px] text-[#000000]">
-              Exclusive
-            </p>
+      <div class="w-full flex justify-center items-center">
+        <div
+          class="w-[1170px] h-[38px] mt-[40px] mx-[135px] mb-[16px] flex items-center justify-between"
+        >
+          <!-- left header -->
+          <div class="w-[645px] h-[24px] flex items-center justify-between">
+            <!-- logo -->
+            <div class="w=[118px] h-full">
+              <p class="font-[700] text-[24px] leading-[24px] text-[#000000]">
+                Exclusive
+              </p>
+            </div>
+            <!-- navlinks -->
+            <div
+              class="w-[367px] h-full text-[#000000] font-[400] text-[16px] leading-[24px] text-center flex gap-[48px]"
+            >
+              <p class="cursor-pointer">Home</p>
+              <p class="cursor-pointer">Contact</p>
+              <p class="cursor-pointer">About</p>
+              <p class="cursor-pointer">Sign Up</p>
+            </div>
           </div>
-          <!-- navlinks -->
-          <div
-            class="w-[367px] h-full text-[#000000] font-[400] text-[16px] leading-[24px] text-center flex gap-[48px]"
-          >
-            <p class="cursor-pointer">Home</p>
-            <p class="cursor-pointer">Contact</p>
-            <p class="cursor-pointer">About</p>
-            <p class="cursor-pointer">Sign Up</p>
-          </div>
-        </div>
-        <!-- right header -->
-        <div class="w-[395px] h-[38px] flex items-center justify-between">
-          <!-- search -->
-          <div
-            class="w-[243px] h-[48px] flex items-center justify-between bg-[#F5F5F5] py-[7px] pr-[12px] pl-[20px] gap-[10px]"
-          >
-            <input
-              type="text"
-              class="w-[153px] font-[400] text-[12px] leading-[18px] border-0 outline-none bg-[#F5F5F5]"
-              placeholder="What are you looking for?"
-            />
-            <button><img src="./assets/search.png" alt="" /></button>
-          </div>
-          <div class="w-[128px] h-[32px] flex items-center justify-between">
-            <img src="./assets/Wishlist.png" alt="" />
-            <img src="./assets/Cart1 with buy.png" alt="" />
-            <img src="./assets/user.png" alt="" />
+          <!-- right header -->
+          <div class="w-[395px] h-[38px] flex items-center justify-between">
+            <!-- search -->
+            <div
+              class="w-[243px] h-[48px] flex items-center justify-between bg-[#F5F5F5] py-[7px] pr-[12px] pl-[20px] gap-[10px]"
+            >
+              <input
+                type="text"
+                class="w-[153px] font-[400] text-[12px] leading-[18px] border-0 outline-none bg-[#F5F5F5]"
+                placeholder="What are you looking for?"
+              />
+              <button><img src="./assets/search.png" alt="" /></button>
+            </div>
+            <div class="w-[128px] h-[32px] flex items-center justify-between">
+              <img src="./assets/Wishlist.png" alt="" />
+              <img src="./assets/Cart1 with buy.png" alt="" />
+              <img src="./assets/user.png" alt="" />
+            </div>
           </div>
         </div>
       </div>
       <hr />
       <!-- main -->
-      <main class="flex-grow"></main>
-      <footer class="w-full h-[440px] bg-[#000000]">
-        <div class="w-[1170px] h-[236px] mt-[80px] ml-[135px]">
-          <!-- exclusive -->
-          <div class="">
-            <!-- exclusive upper -->
-            <div class="flex flex-col gap-[24px]">
-              <p class="text-[#FAFAFA] font-[700] text-[24px] leading-[24px]">
-                Exclusive
-              </p>
-              <p class="font-[500] text-[20px] leading-[28px] text-[#FAFAFA]">
-                Subscribe
-              </p>
-              <p class="text-[#FAFAFA] font-[400] text-[16px]">
-                Get 10% off your first order
-              </p>
-            </div>
-            <!-- exclusive lower -->
-            <div
-              class="w-[217px] h-[48px] rounded-[4px] border-[1.5px] text-[#FAFAFA]"
+      <main class="flex-grow px-[135px] pt-[80px] pb-[140px]">
+        <div class="flex items-center justify-center flex-col gap-[60px]">
+          <div
+            id="wishlist"
+            class="w-[1170px] h-[56px] flex items-center justify-between"
+          >
+            <p class="font-[400] text-[20px] leading-[26px] text-[#000000]">
+              Wishlist (4)
+            </p>
+            <button
+              class="w-[223px] h-[56px] rounded-[4px] border-[1px] border-[#00000080] py-[16px] px-[48px]"
             >
-              <input
-                type="email"
-                placeholder="Enter your email"
-                class="outline-none border-0 bg-[#000000] w-[130px]"
+              Move All To Bag
+            </button>
+          </div>
+          <!-- card container -->
+          <div id="cartContainer" class="flex flex-wrap gap-[30px]"></div>
+        </div>
+      </main>
+      <footer
+        class="w-full h-[440px] bg-[#000000] flex justify-center items-center"
+      >
+        <div class="">
+          <div
+            class="w-[1170px] h-[236px] mt-[80px] ml-[135px] mr-[135px] flex justify-between items-center"
+          >
+            <!-- exclusive -->
+            <div class="flex flex-col gap-[16px]">
+              <!-- exclusive upper -->
+              <div class="flex flex-col gap-[24px]">
+                <p class="text-[#FAFAFA] font-[700] text-[24px] leading-[24px]">
+                  Exclusive
+                </p>
+                <p class="font-[500] text-[20px] leading-[28px] text-[#FAFAFA]">
+                  Subscribe
+                </p>
+                <p class="text-[#FAFAFA] font-[400] text-[16px]">
+                  Get 10% off your first order
+                </p>
+              </div>
+              <!-- exclusive lower -->
+              <div
+                class="w-[217px] h-[48px] rounded-[4px] border-[1.5px] text-[#FAFAFA] flex items-center justify-between py-[12px] px-[16px]"
+              >
+                <input
+                  type="email"
+                  placeholder="Enter your email"
+                  class="outline-none border-0 bg-[#000000] w-[130px]"
+                />
+                <button><img src="./assets/send.png" alt="" /></button>
+              </div>
+            </div>
+            <!-- Support -->
+            <div class="flex flex-col gap-[24px] w-[175px]">
+              <p class="font-[500] text-[20px] leading-[28px] text-[#FAFAFA]">
+                Support
+              </p>
+              <div class="flex flex-col gap-[16px]">
+                <p class="font-[400] text-[16px] leading-[24px] text-[#FAFAFA]">
+                  111 Bijoy sarani, Dhaka, DH 1515, Bangladesh.
+                </p>
+                <p class="font-[400] text-[16px] leading-[24px] text-[#FAFAFA]">
+                  exclusive@gmail.com
+                </p>
+                <p class="font-[400] text-[16px] leading-[24px] text-[#FAFAFA]">
+                  +88015-88888-9999
+                </p>
+              </div>
+            </div>
+            <!-- account -->
+            <div class="flex flex-col gap-[24px]">
+              <p class="font-[500] text-[20px] leading-[28px] text-[#FAFAFA]">
+                Account
+              </p>
+              <div class="flex flex-col gap-[16px]">
+                <a
+                  href=""
+                  class="font-[400] text-[16px] leading-[24px] text-[#FAFAFA]"
+                  >My Account</a
+                >
+                <a
+                  href=""
+                  class="font-[400] text-[16px] leading-[24px] text-[#FAFAFA]"
+                  >Login / Register</a
+                >
+                <a
+                  href=""
+                  class="font-[400] text-[16px] leading-[24px] text-[#FAFAFA]"
+                  >Cart</a
+                >
+                <a
+                  href=""
+                  class="font-[400] text-[16px] leading-[24px] text-[#FAFAFA]"
+                  >Wishlist</a
+                >
+                <a
+                  href=""
+                  class="font-[400] text-[16px] leading-[24px] text-[#FAFAFA]"
+                  >Shop</a
+                >
+              </div>
+            </div>
+            <!-- quick links -->
+            <div class="flex flex-col gap-[24px]">
+              <p class="font-[500] text-[20px] leading-[28px] text-[#FAFAFA]">
+                Quick Link
+              </p>
+              <div class="flex flex-col gap-[16px]">
+                <a
+                  href=""
+                  class="font-[400] text-[16px] leading-[24px] text-[#FAFAFA]"
+                  >Privacy Policy</a
+                >
+                <a
+                  href=""
+                  class="font-[400] text-[16px] leading-[24px] text-[#FAFAFA]"
+                  >Terms Of Use</a
+                >
+                <a
+                  href=""
+                  class="font-[400] text-[16px] leading-[24px] text-[#FAFAFA]"
+                  >FAQ</a
+                >
+                <a
+                  href=""
+                  class="font-[400] text-[16px] leading-[24px] text-[#FAFAFA]"
+                  >Contact</a
+                >
+              </div>
+            </div>
+            <!-- download app -->
+            <div class="flex flex-col gap-[24px]">
+              <div class="flex flex-col gap-[24px]">
+                <p class="font-[500] text-[20px] leading-[28px] text-[#FAFAFA]">
+                  Download App
+                </p>
+                <div class="flex flex-col gap-[8px]">
+                  <p
+                    class="font-[500] text-[12px] leading-[18px] text-[#FAFAFA]"
+                  >
+                    Save $3 with App New User Only
+                  </p>
+                  <div class="flex items-center gap-[8px]">
+                    <img src="./assets/Qr Code.png" alt="" />
+                    <div class="flex flex-col gap-[4px]">
+                      <a href=""
+                        ><img src="./assets/GooglePlay.png" alt=""
+                      /></a>
+                      <a href=""><img src="./assets/AppStore.png" alt="" /></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="flex gap-[24px]">
+                <a href=""><img src="./assets/Icon-Facebook.png" alt="" /></a>
+                <a href=""><img src="./assets/Icon-Twitter.png" alt="" /></a>
+                <a href=""><img src="./assets/icon-instagram.png" alt="" /></a>
+                <a href=""><img src="./assets/Icon-Linkedin.png" alt="" /></a>
+              </div>
+            </div>
+          </div>
+          <!-- copyright -->
+          <div
+            class="w-full h-[40px] opacity-[40%] flex justify-center items-center mt-[60px]"
+          >
+            <div class="flex mt-[16px]">
+              <img
+                class="max-w-[20px] h-[20px]"
+                src="./assets/icon-copyright.png"
+                alt=""
               />
-              <button><img src="./assets/send.png" alt="" /></button>
+              <p class="font-[400] text-[16px] leading-[24px] text-[#FFFFFF]">
+                Copyright Rimel 2022. All right reserved
+              </p>
             </div>
           </div>
         </div>
       </footer>
     </div>
+    <script src="script.js"></script>
   </body>
 </html>
