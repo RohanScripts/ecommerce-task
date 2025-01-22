@@ -133,9 +133,7 @@ const cartProducts = [
   }
 ];
 
-
-
-const cartContainer = document.getElementById("cartContainer")
+const cardContainer = document.getElementById("cardContainer")
 
 const productListing = () => {
   cartProducts.map((eachProduct)=>{
@@ -151,7 +149,7 @@ const productListing = () => {
 
         // dustbin
         const dustbin = document.createElement("div")
-        dustbin.className="flex items-center justify-end"
+        dustbin.className="flex items-center justify-end cursor-pointer"
         cardUpper.appendChild(dustbin)
         
           // dustbin image
@@ -218,8 +216,9 @@ const productListing = () => {
         productPrice.textContent=eachProduct.price
         cardLower.appendChild(productPrice)
 
-    cartContainer.appendChild(cardDiv)
+    cardContainer.appendChild(cardDiv)
   })
 }
 
 productListing()
+

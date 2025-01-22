@@ -77,11 +77,9 @@
               <button><img src="./assets/search.png" alt="" /></button>
             </div>
             <div class="w-[128px] h-[32px] flex items-center justify-between">
-              <img class="cursor-pointer" src="./assets/Wishlist.png" />
-              <a href="cart.html"
-                ><img class="cursor-pointer" src="./assets/Cart1 with buy.png"
-              /></a>
-              <img class="cursor-pointer" src="./assets/user.png" />
+              <img src="./assets/Wishlist.png" alt="" />
+              <img src="./assets/Cart1 with buy.png" alt="" />
+              <img src="./assets/user.png" alt="" />
             </div>
           </div>
         </div>
@@ -89,22 +87,142 @@
       <hr />
       <!-- main -->
       <main class="flex-grow px-[135px] pr-[135px] pt-[80px] pb-[140px]">
-        <div class="flex items-center justify-center flex-col gap-[60px]">
-          <div
-            id="wishlist"
-            class="w-[1170px] h-[56px] flex items-center justify-between"
-          >
-            <p class="font-[400] text-[20px] leading-[26px] text-[#000000]">
-              Wishlist (4)
-            </p>
-            <button
-              class="w-[223px] h-[56px] rounded-[4px] border-[1px] border-[#00000080] py-[16px] px-[48px]"
+        <div id="roadMap" class="flex items-center gap-[12px]">
+          <a href="index.html"
+            ><button
+              class="border-none outline-none font-[400] text-[14px] leading-[21px] text-[#000000] opacity-[50%]"
             >
-              Move All To Bag
-            </button>
+              Home
+            </button></a
+          >
+          <p class="text-[#000000] opacity-[50%]">/</p>
+          <button class="font-[400] text-[14px] leading-[21px] text-[#000000]">
+            Cart
+          </button>
+        </div>
+        <!-- cart listing -->
+        <div
+          class="w-full h-[840px] flex justify-start gap-[80px] items-center flex-col"
+        >
+          <!-- upper -->
+          <div class="flex flex-col gap-[24px] w-[1170px] h-auto">
+            <div id="cartContainer" class="flex flex-col">
+              <div
+                class="w-full h-[72px] flex items-center justify-center shadow-[0px_1px_13px_0px_#0000000D]"
+              >
+                <div
+                  class="w-[1091px] h-[24px] flex items-center justify-between"
+                >
+                  <p
+                    class="font-[400] w-[169px] text-[16px] leading-[24px] text-[#000000]"
+                  >
+                    Product
+                  </p>
+                  <p
+                    class="font-[400] text-[16px] leading-[24px] text-[#000000]"
+                  >
+                    Price
+                  </p>
+                  <p
+                    class="font-[400] text-[16px] leading-[24px] text-[#000000]"
+                  >
+                    Quantity
+                  </p>
+                  <p
+                    class="font-[400] text-[16px] leading-[24px] text-[#000000]"
+                  >
+                    Subtotal
+                  </p>
+                </div>
+              </div>
+              <!-- items -->
+            </div>
+            <div class="w-[1170px] h-[56px] flex justify-between items-center">
+              <button
+                class="w-[220px] h-[56px] rounded-[4px] border-[1px] border-[#000000] py-[16px] px-[48px] border-opacity-50 font-[500] text-[16px] leading-[24px] text-[#000000]"
+              >
+                Return To Shop
+              </button>
+              <button
+                class="w-[220px] h-[56px] rounded-[4px] border-[1px] border-[#00000080] py-[16px] px-[48px] border-opacity-50 font-[500] text-[16px] leading-[24px] text-[#000000]"
+              >
+                Update Cart
+              </button>
+            </div>
           </div>
-          <!-- card container -->
-          <div id="cardContainer" class="flex flex-wrap gap-[30px]"></div>
+          <!-- lower -->
+          <div class="w-[1170px] h-auto flex justify-between">
+            <!-- lower left -->
+            <div class="w-[527px] h-[56px] flex gap-[16px]">
+              <input
+                class="w-[300px] py-[16px] pl-[24px] pr-[164px] outline-none border-[1px] border-[#000000] font-[400] text-[16px] leading-[24px] rounded-[4px]"
+                type="text"
+                placeholder="Coupon Code"
+              />
+              <button
+                class="bg-[#DB4444] w-[211] rounded-[4px] py-[16px] px-[48px] text-[#FAFAFA] text-[16px] leading-[24px]"
+              >
+                Apply Coupon
+              </button>
+            </div>
+            <!-- lower right -->
+            <div
+              class="w-[470px] h-[324px] rounded-[4px] border-[1.5px] border-[#000000] px-[24px] py-[32px] flex flex-col gap-[16px]"
+            >
+              <div class="flex flex-col gap-[24px]">
+                <p class="font-[500] text-[20px] leading-[28px]">Cart Total</p>
+                <div class="flex flex-col gap-[16px]">
+                  <div class="flex justify-between">
+                    <p
+                      class="font-[400] text-[16px] leading-[24px] text-[#000000]"
+                    >
+                      Subtotal:
+                    </p>
+                    <p
+                      id="subTotal"
+                      class="font-[400] text-[16px] leading-[24px] text-[#000000]"
+                    >
+                      0
+                    </p>
+                  </div>
+                  <hr />
+                  <div class="flex justify-between">
+                    <p
+                      class="font-[400] text-[16px] leading-[24px] text-[#000000]"
+                    >
+                      Shipping:
+                    </p>
+                    <p
+                      class="font-[400] text-[16px] leading-[24px] text-[#000000]"
+                    >
+                      Free
+                    </p>
+                  </div>
+                  <hr />
+                  <div class="flex justify-between">
+                    <p
+                      class="font-[400] text-[16px] leading-[24px] text-[#000000]"
+                    >
+                      Total:
+                    </p>
+                    <p
+                      id="totalAmount"
+                      class="font-[400] text-[16px] leading-[24px] text-[#000000]"
+                    >
+                      0
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="w-full h-auto flex items-center justify-center">
+                <button
+                  class="py-[16px] px-[48px] bg-[#DB4444] rounded-[4px] text-[#FAFAFA] font-[500] text-[16px] leading-[24px]"
+                >
+                  Procees to checkout
+                </button>
+              </div>
+            </div>
+          </div>
         </div>
       </main>
       <footer
@@ -267,6 +385,6 @@
         </div>
       </footer>
     </div>
-    <script src="script.js"></script>
+    <script src="cartScript.js"></script>
   </body>
 </html>
