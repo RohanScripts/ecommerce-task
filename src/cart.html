@@ -16,24 +16,28 @@
     <div class="w-full h-auto bg-white flex flex-col">
       <!-- top header -->
       <div
-        class="w-full h-[48px] bg-[#000000] flex justify-center items-center"
+        class="max-w-full md:px-[15px] h-[48px] bg-[#000000] flex justify-center items-center"
       >
-        <div class="w-[859px] h-[24px] text-[#FAFAFA] flex justify-between">
+        <div
+          class="w-[859px] h-[24px] text-[#FAFAFA] flex justify-center md:justify-between"
+        >
           <!-- left header -->
-          <div class="w-[550px] h-full flex items-center justify-between">
-            <p class="font-[400] text-[14px] leading-[21px]">
+          <div
+            class="sm:w-[550px] w-auto h-full flex items-center justify-center md:justify-between"
+          >
+            <p class="font-[400] sm:text-[14px] text-[10px] leading-[21px]">
               Summer Sale For All Swim Suits And Free Express Delivery - OFF
               50%!
             </p>
             <p
-              class="font-[600] text-[14px] leading-[24px] text-center underline cursor-pointer"
+              class="font-[600] text-[14px] leading-[24px] text-center underline cursor-pointer md:block hidden"
             >
               ShopNow
             </p>
           </div>
           <!-- right header -->
           <div
-            class="w-[78px] h-full flex items-center justify-between cursor-pointer"
+            class="w-[78px] h-full items-center justify-between cursor-pointer hidden md:flex"
           >
             <p class="font-[400] text-[14px] leading-[21px]">English</p>
             <img src="./assets/downArrow.png" alt="" />
@@ -41,12 +45,12 @@
         </div>
       </div>
       <!-- header -->
-      <div class="w-full flex justify-center items-center">
+      <div class="w-auto flex justify-center items-center p-[10px]">
         <div
-          class="max-w-[1170px] h-[38px] mt-[40px] mx-[135px] mb-[16px] flex items-center justify-between"
+          class="w-[1170px] h-[38px] flex items-center justify-between p-[25px]"
         >
           <!-- left header -->
-          <div class="w-[645px] h-[24px] flex items-center justify-between">
+          <div class="w-auto h-[24px] flex items-center gap-[100px]">
             <!-- logo -->
             <div class="w=[118px] h-full">
               <p class="font-[700] text-[24px] leading-[24px] text-[#000000]">
@@ -55,7 +59,7 @@
             </div>
             <!-- navlinks -->
             <div
-              class="w-[367px] h-full text-[#000000] font-[400] text-[16px] leading-[24px] text-center flex gap-[48px]"
+              class="w-[367px] h-full text-[#000000] font-[400] text-[16px] leading-[24px] text-center gap-[48px] lg:flex hidden"
             >
               <p class="cursor-pointer">Home</p>
               <p class="cursor-pointer">Contact</p>
@@ -64,10 +68,12 @@
             </div>
           </div>
           <!-- right header -->
-          <div class="w-[395px] h-[38px] flex items-center justify-between">
+          <div
+            class="md:w-[395px] sm:w-auto h-[38px] flex items-center justify-between"
+          >
             <!-- search -->
             <div
-              class="w-[243px] h-[48px] flex items-center justify-between bg-[#F5F5F5] py-[7px] pr-[12px] pl-[20px] gap-[10px]"
+              class="w-[243px] h-[48px] bg-[#F5F5F5] py-[7px] pr-[12px] pl-[20px] gap-[10px] md:flex hidden"
             >
               <input
                 type="text"
@@ -77,9 +83,11 @@
               <button><img src="./assets/search.png" alt="" /></button>
             </div>
             <div class="w-[128px] h-[32px] flex items-center justify-between">
-              <img src="./assets/Wishlist.png" alt="" />
-              <img src="./assets/Cart1 with buy.png" alt="" />
-              <img src="./assets/user.png" alt="" />
+              <img class="cursor-pointer" src="./assets/Wishlist.png" />
+              <a href="cart.html"
+                ><img class="cursor-pointer" src="./assets/Cart1 with buy.png"
+              /></a>
+              <img class="cursor-pointer" src="./assets/user.png" />
             </div>
           </div>
         </div>
@@ -102,16 +110,16 @@
         </div>
         <!-- cart listing -->
         <div
-          class="w-full h-[840px] flex justify-start gap-[80px] items-center flex-col"
+          class="w-full h-auto flex justify-start gap-[80px] items-center flex-col"
         >
           <!-- upper -->
-          <div class="flex flex-col gap-[24px] w-[1170px] h-auto">
-            <div id="cartContainer" class="flex flex-col">
+          <div class="flex flex-col gap-[24px] max-w-full lg:w-[1024px] h-auto">
+            <div id="cartContainer" class="flex flex-col w-auto">
               <div
-                class="w-full h-[72px] flex items-center justify-center shadow-[0px_1px_13px_0px_#0000000D]"
+                class="h-[72px] flex items-center justify-center shadow-[0px_1px_13px_0px_#0000000D] px-[10px]"
               >
                 <div
-                  class="w-[1091px] h-[24px] flex items-center justify-between"
+                  class="xl:w-[1091px] lg:w-[1000px] md:w-[600px] h-[24px] flex items-center justify-between"
                 >
                   <p
                     class="font-[400] w-[169px] text-[16px] leading-[24px] text-[#000000]"
@@ -119,7 +127,7 @@
                     Product
                   </p>
                   <p
-                    class="font-[400] text-[16px] leading-[24px] text-[#000000]"
+                    class="font-[400] text-[16px] leading-[24px] text-[#000000] xl:block hidden"
                   >
                     Price
                   </p>
@@ -137,7 +145,9 @@
               </div>
               <!-- items -->
             </div>
-            <div class="w-[1170px] h-[56px] flex justify-between items-center">
+            <div
+              class="xl:w-full lg:w-[800px] h-[56px] flex justify-between items-center"
+            >
               <button
                 class="w-[220px] h-[56px] rounded-[4px] border-[1px] border-[#000000] py-[16px] px-[48px] border-opacity-50 font-[500] text-[16px] leading-[24px] text-[#000000]"
               >
@@ -151,25 +161,27 @@
             </div>
           </div>
           <!-- lower -->
-          <div class="w-[1170px] h-auto flex justify-between">
+          <div
+            class="max-w-full lg:w-[1024px] h-auto flex xl:flex-row flex-col gap-[30px] justify-between"
+          >
             <!-- lower left -->
-            <div class="w-[527px] h-[56px] flex gap-[16px]">
+            <div class="w-auto h-[56px] flex gap-[16px]">
               <input
                 class="w-[300px] py-[16px] pl-[24px] pr-[164px] outline-none border-[1px] border-[#000000] font-[400] text-[16px] leading-[24px] rounded-[4px]"
                 type="text"
                 placeholder="Coupon Code"
               />
               <button
-                class="bg-[#DB4444] w-[211] rounded-[4px] py-[16px] px-[48px] text-[#FAFAFA] text-[16px] leading-[24px]"
+                class="bg-[#DB4444] w-[211px] rounded-[4px] py-[16px] lg:px-[48px] md:px-[30px] text-[#FAFAFA] text-[16px] leading-[24px]"
               >
                 Apply Coupon
               </button>
             </div>
             <!-- lower right -->
             <div
-              class="w-[470px] h-[324px] rounded-[4px] border-[1.5px] border-[#000000] px-[24px] py-[32px] flex flex-col gap-[16px]"
+              class="lg:w-[470px] md:w-auto h-[324px] rounded-[4px] border-[1.5px] border-[#000000] px-[24px] py-[32px] flex flex-col gap-[16px]"
             >
-              <div class="flex flex-col gap-[24px]">
+              <div class="flex flex-col gap-[24px] w-full">
                 <p class="font-[500] text-[20px] leading-[28px]">Cart Total</p>
                 <div class="flex flex-col gap-[16px]">
                   <div class="flex justify-between">
@@ -226,147 +238,166 @@
         </div>
       </main>
       <footer
-        class="w-full h-[440px] bg-[#000000] flex justify-center items-center"
+        class="w-full h-auto bg-[#000000] flex justify-center items-center p-[20px]"
       >
-        <div class="">
-          <div
-            class="w-[1170px] h-[236px] mt-[80px] ml-[135px] mr-[135px] flex justify-between items-center"
-          >
-            <!-- exclusive -->
-            <div class="flex flex-col gap-[16px]">
-              <!-- exclusive upper -->
-              <div class="flex flex-col gap-[24px]">
-                <p class="text-[#FAFAFA] font-[700] text-[24px] leading-[24px]">
-                  Exclusive
-                </p>
-                <p class="font-[500] text-[20px] leading-[28px] text-[#FAFAFA]">
-                  Subscribe
-                </p>
-                <p class="text-[#FAFAFA] font-[400] text-[16px]">
-                  Get 10% off your first order
-                </p>
-              </div>
-              <!-- exclusive lower -->
-              <div
-                class="w-[217px] h-[48px] rounded-[4px] border-[1.5px] text-[#FAFAFA] flex items-center justify-between py-[12px] px-[16px]"
-              >
-                <input
-                  type="email"
-                  placeholder="Enter your email"
-                  class="outline-none border-0 bg-[#000000] w-[130px]"
-                />
-                <button><img src="./assets/send.png" alt="" /></button>
-              </div>
-            </div>
-            <!-- Support -->
-            <div class="flex flex-col gap-[24px] w-[175px]">
-              <p class="font-[500] text-[20px] leading-[28px] text-[#FAFAFA]">
-                Support
-              </p>
+        <div class="w-full">
+          <div class="flex justify-center items-center p-[40px]">
+            <div
+              class="w-[1170px] h-auto flex flex-wrap justify-center gap-[87px] items-center"
+            >
+              <!-- exclusive -->
               <div class="flex flex-col gap-[16px]">
-                <p class="font-[400] text-[16px] leading-[24px] text-[#FAFAFA]">
-                  111 Bijoy sarani, Dhaka, DH 1515, Bangladesh.
-                </p>
-                <p class="font-[400] text-[16px] leading-[24px] text-[#FAFAFA]">
-                  exclusive@gmail.com
-                </p>
-                <p class="font-[400] text-[16px] leading-[24px] text-[#FAFAFA]">
-                  +88015-88888-9999
-                </p>
-              </div>
-            </div>
-            <!-- account -->
-            <div class="flex flex-col gap-[24px]">
-              <p class="font-[500] text-[20px] leading-[28px] text-[#FAFAFA]">
-                Account
-              </p>
-              <div class="flex flex-col gap-[16px]">
-                <a
-                  href=""
-                  class="font-[400] text-[16px] leading-[24px] text-[#FAFAFA]"
-                  >My Account</a
-                >
-                <a
-                  href=""
-                  class="font-[400] text-[16px] leading-[24px] text-[#FAFAFA]"
-                  >Login / Register</a
-                >
-                <a
-                  href=""
-                  class="font-[400] text-[16px] leading-[24px] text-[#FAFAFA]"
-                  >Cart</a
-                >
-                <a
-                  href=""
-                  class="font-[400] text-[16px] leading-[24px] text-[#FAFAFA]"
-                  >Wishlist</a
-                >
-                <a
-                  href=""
-                  class="font-[400] text-[16px] leading-[24px] text-[#FAFAFA]"
-                  >Shop</a
-                >
-              </div>
-            </div>
-            <!-- quick links -->
-            <div class="flex flex-col gap-[24px]">
-              <p class="font-[500] text-[20px] leading-[28px] text-[#FAFAFA]">
-                Quick Link
-              </p>
-              <div class="flex flex-col gap-[16px]">
-                <a
-                  href=""
-                  class="font-[400] text-[16px] leading-[24px] text-[#FAFAFA]"
-                  >Privacy Policy</a
-                >
-                <a
-                  href=""
-                  class="font-[400] text-[16px] leading-[24px] text-[#FAFAFA]"
-                  >Terms Of Use</a
-                >
-                <a
-                  href=""
-                  class="font-[400] text-[16px] leading-[24px] text-[#FAFAFA]"
-                  >FAQ</a
-                >
-                <a
-                  href=""
-                  class="font-[400] text-[16px] leading-[24px] text-[#FAFAFA]"
-                  >Contact</a
-                >
-              </div>
-            </div>
-            <!-- download app -->
-            <div class="flex flex-col gap-[24px]">
-              <div class="flex flex-col gap-[24px]">
-                <p class="font-[500] text-[20px] leading-[28px] text-[#FAFAFA]">
-                  Download App
-                </p>
-                <div class="flex flex-col gap-[8px]">
+                <!-- exclusive upper -->
+                <div class="flex flex-col gap-[24px]">
                   <p
-                    class="font-[500] text-[12px] leading-[18px] text-[#FAFAFA]"
+                    class="text-[#FAFAFA] font-[700] text-[24px] leading-[24px]"
                   >
-                    Save $3 with App New User Only
+                    Exclusive
                   </p>
-                  <div class="flex items-center gap-[8px]">
-                    <img src="./assets/Qr Code.png" alt="" />
-                    <div class="flex flex-col gap-[4px]">
-                      <a href=""
-                        ><img src="./assets/GooglePlay.png" alt=""
-                      /></a>
-                      <a href=""><img src="./assets/AppStore.png" alt="" /></a>
+                  <p
+                    class="font-[500] text-[20px] leading-[28px] text-[#FAFAFA]"
+                  >
+                    Subscribe
+                  </p>
+                  <p class="text-[#FAFAFA] font-[400] text-[16px]">
+                    Get 10% off your first order
+                  </p>
+                </div>
+                <!-- exclusive lower -->
+                <div
+                  class="w-[217px] h-[48px] rounded-[4px] border-[1.5px] text-[#FAFAFA] flex items-center justify-between py-[12px] px-[16px]"
+                >
+                  <input
+                    type="email"
+                    placeholder="Enter your email"
+                    class="outline-none border-0 bg-[#000000] w-[130px]"
+                  />
+                  <button><img src="./assets/send.png" alt="" /></button>
+                </div>
+              </div>
+              <!-- Support -->
+              <div class="flex flex-col gap-[24px] w-[175px]">
+                <p class="font-[500] text-[20px] leading-[28px] text-[#FAFAFA]">
+                  Support
+                </p>
+                <div class="flex flex-col gap-[16px]">
+                  <p
+                    class="font-[400] text-[16px] leading-[24px] text-[#FAFAFA]"
+                  >
+                    111 Bijoy sarani, Dhaka, DH 1515, Bangladesh.
+                  </p>
+                  <p
+                    class="font-[400] text-[16px] leading-[24px] text-[#FAFAFA]"
+                  >
+                    exclusive@gmail.com
+                  </p>
+                  <p
+                    class="font-[400] text-[16px] leading-[24px] text-[#FAFAFA]"
+                  >
+                    +88015-88888-9999
+                  </p>
+                </div>
+              </div>
+              <!-- account -->
+              <div class="flex flex-col gap-[24px]">
+                <p class="font-[500] text-[20px] leading-[28px] text-[#FAFAFA]">
+                  Account
+                </p>
+                <div class="flex flex-col gap-[16px]">
+                  <a
+                    href=""
+                    class="font-[400] text-[16px] leading-[24px] text-[#FAFAFA]"
+                    >My Account</a
+                  >
+                  <a
+                    href=""
+                    class="font-[400] text-[16px] leading-[24px] text-[#FAFAFA]"
+                    >Login / Register</a
+                  >
+                  <a
+                    href=""
+                    class="font-[400] text-[16px] leading-[24px] text-[#FAFAFA]"
+                    >Cart</a
+                  >
+                  <a
+                    href=""
+                    class="font-[400] text-[16px] leading-[24px] text-[#FAFAFA]"
+                    >Wishlist</a
+                  >
+                  <a
+                    href=""
+                    class="font-[400] text-[16px] leading-[24px] text-[#FAFAFA]"
+                    >Shop</a
+                  >
+                </div>
+              </div>
+              <!-- quick links -->
+              <div class="flex flex-col gap-[24px]">
+                <p class="font-[500] text-[20px] leading-[28px] text-[#FAFAFA]">
+                  Quick Link
+                </p>
+                <div class="flex flex-col gap-[16px]">
+                  <a
+                    href=""
+                    class="font-[400] text-[16px] leading-[24px] text-[#FAFAFA]"
+                    >Privacy Policy</a
+                  >
+                  <a
+                    href=""
+                    class="font-[400] text-[16px] leading-[24px] text-[#FAFAFA]"
+                    >Terms Of Use</a
+                  >
+                  <a
+                    href=""
+                    class="font-[400] text-[16px] leading-[24px] text-[#FAFAFA]"
+                    >FAQ</a
+                  >
+                  <a
+                    href=""
+                    class="font-[400] text-[16px] leading-[24px] text-[#FAFAFA]"
+                    >Contact</a
+                  >
+                </div>
+              </div>
+              <!-- download app -->
+              <div class="flex flex-col gap-[24px]">
+                <div class="flex flex-col gap-[24px]">
+                  <p
+                    class="font-[500] text-[20px] leading-[28px] text-[#FAFAFA]"
+                  >
+                    Download App
+                  </p>
+                  <div class="flex flex-col gap-[8px]">
+                    <p
+                      class="font-[500] text-[12px] leading-[18px] text-[#FAFAFA]"
+                    >
+                      Save $3 with App New User Only
+                    </p>
+                    <div class="flex items-center gap-[8px]">
+                      <img src="./assets/Qr Code.png" alt="" />
+                      <div class="flex flex-col gap-[4px]">
+                        <a href=""
+                          ><img src="./assets/GooglePlay.png" alt=""
+                        /></a>
+                        <a href=""
+                          ><img src="./assets/AppStore.png" alt=""
+                        /></a>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-              <div class="flex gap-[24px]">
-                <a href=""><img src="./assets/Icon-Facebook.png" alt="" /></a>
-                <a href=""><img src="./assets/Icon-Twitter.png" alt="" /></a>
-                <a href=""><img src="./assets/icon-instagram.png" alt="" /></a>
-                <a href=""><img src="./assets/Icon-Linkedin.png" alt="" /></a>
+                <div class="flex gap-[24px]">
+                  <a href=""><img src="./assets/Icon-Facebook.png" alt="" /></a>
+                  <a href=""><img src="./assets/Icon-Twitter.png" alt="" /></a>
+                  <a href=""
+                    ><img src="./assets/icon-instagram.png" alt=""
+                  /></a>
+                  <a href=""><img src="./assets/Icon-Linkedin.png" alt="" /></a>
+                </div>
               </div>
             </div>
           </div>
+
           <!-- copyright -->
           <div
             class="w-full h-[40px] opacity-[40%] flex justify-center items-center mt-[60px]"

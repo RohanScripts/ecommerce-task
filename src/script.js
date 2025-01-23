@@ -133,13 +133,14 @@ const cartProducts = [
   }
 ];
 
+document.getElementById("wishlistCount").innerHTML = `(${cartProducts.length})`
 const cardContainer = document.getElementById("cardContainer")
 
 const productListing = () => {
   cartProducts.map((eachProduct)=>{
     // create cart div
     const cardDiv = document.createElement("div")
-    cardDiv.className="w-[270px] h-[322px] flex flex-col justify-between"
+    cardDiv.className="md:w-[270px] sm:w-[200px] h-[322px] flex flex-col justify-between"
     
 
       // card upper
@@ -170,9 +171,9 @@ const productListing = () => {
 
         // add button
         const addButton = document.createElement("button")
-        addButton.className="w-[270px] h-[41px] bg-[#000000] rounded-br-[4px] rounded-bl-[4px] flex justify-center items-center"
+        addButton.className="md:w-[270px] opacity-50 hover:opacity-100 duration-300 sm:w-[200px] h-[41px] bg-[#000000] rounded-br-[4px] rounded-bl-[4px] flex justify-center items-center"
         cardUpper.appendChild(addButton)
-
+ 
         // storing to localStorage
         addButton.addEventListener("click",function  (){
             const storedCart = localStorage.getItem("cart")

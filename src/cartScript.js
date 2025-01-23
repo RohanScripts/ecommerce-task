@@ -15,12 +15,13 @@ cartItems.forEach((eachItem)=>{
     const itemId = eachItem.id
 
     totalAmount = totalAmount + eachItem.price
+    
     console.log(totalAmount);
     document.getElementById("cartContainer").innerHTML = document.getElementById("cartContainer").innerHTML + `<div
-               id="${itemId}" class="w-full h-[102px] shadow-[0px_1px_13px_0px_#0000000D] flex justify-center items-center" 
+               id="${itemId}" class=" h-[102px] px-[10px] shadow-[0px_1px_13px_0px_#0000000D] flex justify-center items-center" 
             >
-              <div class="w-[1091px] flex items-center justify-between">
-                <div class="flex items-center gap-[20px]">
+              <div class="xl:w-[1091px] lg:w-[1000px] md:w-[600px] flex items-center justify-between">
+                <div class="flex items-center gap-[20px] max-w-[176px]">
                   <div
                     class="w-[54px] h-[54px] relative flex justify-center items-center"
                   >
@@ -31,13 +32,15 @@ cartItems.forEach((eachItem)=>{
                       src="./assets/cancel.png"
                     />
                   </div>
-                  <p class="font-[400] text-[16px] leading-[24px]">
+                  <p class="font-[400] text-[16px] max-w-[96px] leading-[24px]">
                     ${eachItem.title}
                   </p>
                 </div>
-                <p class="font-[400] text-[16px] leading-[24px] text-[#000000]">
-                  ${eachItem.price}
-                </p>
+                <div class="max-w-[40px] h-[24px]  justify-center items-center xl:block hidden">
+                    <p class="font-[400] max-w-[40px] text-[16px] leading-[24px] text-[#000000]">
+                      ${eachItem.price}
+                    </p>
+                </div>
                 <div
                   class="w-[72px] h-[44px] rounded-[4px] border-[1.5px] border-[#00000066] flex justify-center items-center"
                 >
@@ -75,9 +78,18 @@ const deleteItem = (deleteId, itemId) => {
         element.remove()
     }
 
-    document.getElementById("subTotal").textContent = totalAmount
-    document.getElementById("totalAmount").textContent = totalAmount
+    let totalAmount = 0;
+    
+    cartItems.forEach((eachItem)=>{
+      totalAmount = totalAmount + eachItem.price
+    })    
+
+    const roundedTotal = totalAmount.toFixed(2)
+
+    document.getElementById("subTotal").textContent = roundedTotal
+    document.getElementById("totalAmount").textContent = roundedTotal
 }
 
-document.getElementById("subTotal").textContent = totalAmount
-document.getElementById("totalAmount").textContent = totalAmount
+const roundedTotal = totalAmount.toFixed(2)
+document.getElementById("subTotal").textContent = roundedTotal
+document.getElementById("totalAmount").textContent = roundedTotal
