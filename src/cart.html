@@ -46,9 +46,7 @@
       </div>
       <!-- header -->
       <div class="w-auto flex justify-center items-center p-[10px]">
-        <div
-          class="w-[1170px] h-[38px] flex items-center justify-between p-[25px]"
-        >
+        <div class="w-full h-[38px] flex items-center justify-between p-[25px]">
           <!-- left header -->
           <div class="w-auto h-[24px] flex items-center gap-[100px]">
             <!-- logo -->
@@ -94,7 +92,9 @@
       </div>
       <hr />
       <!-- main -->
-      <main class="flex-grow px-[135px] pr-[135px] pt-[80px] pb-[140px]">
+      <main
+        class="flex-grow px-[135px] pr-[135px] pt-[80px] flex justify-center items-start flex-col gap-[20px] pb-[140px]"
+      >
         <div id="roadMap" class="flex items-center gap-[12px]">
           <a href="index.html"
             ><button
@@ -113,13 +113,13 @@
           class="w-full h-auto flex justify-start gap-[80px] items-center flex-col"
         >
           <!-- upper -->
-          <div class="flex flex-col gap-[24px] max-w-full lg:w-[1024px] h-auto">
+          <div class="flex flex-col gap-[24px] w-auto lg:w-[1024px] h-auto">
             <div id="cartContainer" class="flex flex-col w-auto">
               <div
-                class="h-[72px] flex items-center justify-center shadow-[0px_1px_13px_0px_#0000000D] px-[10px]"
+                class="h-[72px] w-auto flex items-center justify-center shadow-[0px_1px_13px_0px_#0000000D] px-[10px]"
               >
                 <div
-                  class="xl:w-[1091px] lg:w-[1000px] md:w-[600px] h-[24px] flex items-center justify-between"
+                  class="xl:w-[1091px] lg:w-[850px] md:w-[600px] sm:w-[500px] w-[350px] h-[24px] flex items-center justify-between"
                 >
                   <p
                     class="font-[400] w-[169px] text-[16px] leading-[24px] text-[#000000]"
@@ -146,13 +146,15 @@
               <!-- items -->
             </div>
             <div
-              class="xl:w-full lg:w-[800px] h-[56px] flex justify-between items-center"
+              class="xl:w-full lg:w-[800px] h-[56px] flex flex-col gap-[10px] md:flex-row justify-between items-center"
             >
-              <button
-                class="w-[220px] h-[56px] rounded-[4px] border-[1px] border-[#000000] py-[16px] px-[48px] border-opacity-50 font-[500] text-[16px] leading-[24px] text-[#000000]"
-              >
-                Return To Shop
-              </button>
+              <a href="./index.html">
+                <button
+                  class="w-[220px] h-[56px] rounded-[4px] border-[1px] border-[#000000] py-[16px] px-[48px] border-opacity-50 font-[500] text-[16px] leading-[24px] text-[#000000]"
+                >
+                  Return To Shop
+                </button>
+              </a>
               <button
                 class="w-[220px] h-[56px] rounded-[4px] border-[1px] border-[#00000080] py-[16px] px-[48px] border-opacity-50 font-[500] text-[16px] leading-[24px] text-[#000000]"
               >
@@ -162,24 +164,24 @@
           </div>
           <!-- lower -->
           <div
-            class="max-w-full lg:w-[1024px] h-auto flex xl:flex-row flex-col gap-[30px] justify-between"
+            class="w-auto lg:w-[1024px] h-auto flex xl:flex-row flex-col gap-[100px] justify-between"
           >
             <!-- lower left -->
-            <div class="w-auto h-[56px] flex gap-[16px]">
+            <div class="w-auto h-[56px] flex gap-[16px] md:flex-row flex-col">
               <input
-                class="w-[300px] py-[16px] pl-[24px] pr-[164px] outline-none border-[1px] border-[#000000] font-[400] text-[16px] leading-[24px] rounded-[4px]"
+                class="md:w-[300px] w-[300px] sm:w-[400px] px-[15px] py-[15px] sm:py-[16px] sm:pl-[24px] sm:pr-[164px] outline-none border-[1px] border-[#000000] font-[400] text-[16px] leading-[24px] rounded-[4px]"
                 type="text"
                 placeholder="Coupon Code"
               />
               <button
-                class="bg-[#DB4444] w-[211px] rounded-[4px] py-[16px] lg:px-[48px] md:px-[30px] text-[#FAFAFA] text-[16px] leading-[24px]"
+                class="bg-[#DB4444] md:w-[211px] w-[300px] sm:w-[400px] px-[15px] py-[15px] rounded-[4px] sm:py-[16px] lg:px-[48px] sm:px-[30px] text-[#FAFAFA] text-[16px] leading-[24px]"
               >
                 Apply Coupon
               </button>
             </div>
             <!-- lower right -->
             <div
-              class="lg:w-[470px] md:w-auto h-[324px] rounded-[4px] border-[1.5px] border-[#000000] px-[24px] py-[32px] flex flex-col gap-[16px]"
+              class="lg:w-[470px] w-[300px] sm:w-[400px] md:w-auto h-[324px] rounded-[4px] border-[1.5px] border-[#000000] px-[24px] py-[32px] flex flex-col gap-[16px]"
             >
               <div class="flex flex-col gap-[24px] w-full">
                 <p class="font-[500] text-[20px] leading-[28px]">Cart Total</p>
@@ -228,7 +230,7 @@
               </div>
               <div class="w-full h-auto flex items-center justify-center">
                 <button
-                  class="py-[16px] px-[48px] bg-[#DB4444] rounded-[4px] text-[#FAFAFA] font-[500] text-[16px] leading-[24px]"
+                  class="sm:py-[16px] sm:px-[48px] px-[15px] py-[15px] bg-[#DB4444] rounded-[4px] text-[#FAFAFA] font-[500] sm:text-[16px] text-[13px] leading-[24px]"
                 >
                   Procees to checkout
                 </button>
