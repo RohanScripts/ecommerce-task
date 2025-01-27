@@ -148,6 +148,9 @@ cartItems.forEach((eachItem)=>{
 })
 document.getElementById("subTotal").textContent = xyz
 document.getElementById("totalAmount").textContent = xyz
+
+let count = JSON.parse(localStorage.getItem("cart"))
+document.getElementById("cartBadge").innerText = count.length
 }
 
 // each element's subtotal

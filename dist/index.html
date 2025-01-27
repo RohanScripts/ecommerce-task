@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link href="./output.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jersey+15&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="w-full">
+    <div class="w-full h-auto bg-white flex flex-col">
+      <!-- top header -->
+      <div
+        class="max-w-full md:px-[15px] h-[48px] bg-[#000000] flex justify-center items-center"
+      >
+        <div
+          class="w-[859px] h-[24px] text-[#FAFAFA] flex justify-center md:justify-between"
+        >
+          <!-- left header -->
+          <div
+            class="sm:w-[550px] w-auto h-full flex items-center justify-center md:justify-between"
+          >
+            <p class="font-[400] sm:text-[14px] text-[10px] leading-[21px]">
+              Summer Sale For All Swim Suits And Free Express Delivery - OFF
+              50%!
+            </p>
+            <p
+              class="font-[600] text-[14px] leading-[24px] text-center underline cursor-pointer md:block hidden"
+            >
+              ShopNow
+            </p>
+          </div>
+          <!-- right header -->
+          <div
+            class="w-[78px] h-full items-center justify-between cursor-pointer hidden md:flex"
+          >
+            <p class="font-[400] text-[14px] leading-[21px]">English</p>
+            <img src="./assets/downArrow.png" alt="" />
+          </div>
+        </div>
+      </div>
+      <!-- header -->
+      <div class="w-auto flex justify-center items-center p-[10px]">
+        <div
+          class="w-[1170px] h-[38px] flex items-center justify-between p-[25px]"
+        >
+          <!-- left header -->
+          <div class="w-auto h-[24px] flex items-center gap-[100px]">
+            <!-- logo -->
+            <div class="w=[118px] h-full">
+              <p class="font-[700] text-[24px] leading-[24px] text-[#000000]">
+                Exclusive
+              </p>
+            </div>
+            <!-- navlinks -->
+            <div
+              class="w-[367px] h-full text-[#000000] font-[400] text-[16px] leading-[24px] text-center gap-[48px] lg:flex hidden"
+            >
+              <p class="cursor-pointer">Home</p>
+              <p class="cursor-pointer">Contact</p>
+              <p class="cursor-pointer">About</p>
+              <p class="cursor-pointer">Sign Up</p>
+            </div>
+          </div>
+          <!-- right header -->
+          <div
+            class="md:w-[395px] sm:w-auto h-[38px] flex items-center justify-between"
+          >
+            <!-- search -->
+            <div
+              class="w-[243px] h-[48px] bg-[#F5F5F5] py-[7px] pr-[12px] pl-[20px] gap-[10px] md:flex hidden"
+            >
+              <input
+                type="text"
+                class="w-[153px] font-[400] text-[12px] leading-[18px] border-0 outline-none bg-[#F5F5F5]"
+                placeholder="What are you looking for?"
+              />
+              <button><img src="./assets/search.png" alt="" /></button>
+            </div>
+            <div class="w-[128px] h-[32px] flex items-center justify-between">
+              <img class="cursor-pointer" src="./assets/Wishlist.png" />
+              <a
+                class="relative flex items-center justify-center"
+                href="cart.html"
+                ><img class="cursor-pointer" src="./assets/Cart1.png" />
+                <div
+                  id="cartBadge"
+                  class="flex items-center justify-center text-xs w-[16px] h-[16px] bg-[#DB4444] rounded-full absolute -top-[5px] left-[14px] text-white"
+                ></div>
+              </a>
+              <img class="cursor-pointer" src="./assets/user.png" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr />
+      <!-- main -->
+      <main
+        class="flex-grow 2xl:px-[135px] xl:px-[110px] lg:px-[100px] md:px-[80px] sm:px-[50px] px-[40px] pt-[80px] pb-[140px]"
+      >
+        <div class="flex items-center justify-center flex-col gap-[60px]">
+          <div
+            id="wishlist"
+            class="lg:w-[900px] xl:w-[1170px] md:w-[750px] sm:w-[500px] h-[56px] flex flex-col sm:flex-row gap-[10px] items-center justify-between"
+          >
+            <p
+              class="font-[400] md:text-[20px] text-[15px] leading-[26px] text-[#000000]"
+            >
+              Wishlist <span id="wishlistCount"></span>
+            </p>
+            <button
+              class="md:text-[15px] text-[12px] md:w-[223px] md:h-[56px] rounded-[4px] border-[1px] border-[#00000080] md:py-[16px] sm:py-[10px] md:px-[48px] sm:px-[10px] px-[10px] py-[10px]"
+            >
+              Move All To Bag
+            </button>
+          </div>
+          <!-- card container -->
+          <div
+            id="cardContainer"
+            class="flex flex-wrap justify-center items-center gap-[30px]"
+          ></div>
+        </div>
+      </main>
+      <footer
+        class="w-full h-auto bg-[#000000] flex justify-center items-center p-[20px]"
+      >
+        <div class="w-full">
+          <div class="flex justify-center items-center p-[40px]">
+            <div
+              class="w-[1170px] h-auto flex flex-wrap justify-center gap-[87px] items-center"
+            >
+              <!-- exclusive -->
+              <div class="flex flex-col gap-[16px]">
+                <!-- exclusive upper -->
+                <div class="flex flex-col gap-[24px]">
+                  <p
+                    class="text-[#FAFAFA] font-[700] text-[24px] leading-[24px]"
+                  >
+                    Exclusive
+                  </p>
+                  <p
+                    class="font-[500] text-[20px] leading-[28px] text-[#FAFAFA]"
+                  >
+                    Subscribe
+                  </p>
+                  <p class="text-[#FAFAFA] font-[400] text-[16px]">
+                    Get 10% off your first order
+                  </p>
+                </div>
+                <!-- exclusive lower -->
+                <div
+                  class="w-[217px] h-[48px] rounded-[4px] border-[1.5px] text-[#FAFAFA] flex items-center justify-between py-[12px] px-[16px]"
+                >
+                  <input
+                    type="email"
+                    placeholder="Enter your email"
+                    class="outline-none border-0 bg-[#000000] w-[130px]"
+                  />
+                  <button><img src="./assets/send.png" alt="" /></button>
+                </div>
+              </div>
+              <!-- Support -->
+              <div class="flex flex-col gap-[24px] w-[175px]">
+                <p class="font-[500] text-[20px] leading-[28px] text-[#FAFAFA]">
+                  Support
+                </p>
+                <div class="flex flex-col gap-[16px]">
+                  <p
+                    class="font-[400] text-[16px] leading-[24px] text-[#FAFAFA]"
+                  >
+                    111 Bijoy sarani, Dhaka, DH 1515, Bangladesh.
+                  </p>
+                  <p
+                    class="font-[400] text-[16px] leading-[24px] text-[#FAFAFA]"
+                  >
+                    exclusive@gmail.com
+                  </p>
+                  <p
+                    class="font-[400] text-[16px] leading-[24px] text-[#FAFAFA]"
+                  >
+                    +88015-88888-9999
+                  </p>
+                </div>
+              </div>
+              <!-- account -->
+              <div class="flex flex-col gap-[24px]">
+                <p class="font-[500] text-[20px] leading-[28px] text-[#FAFAFA]">
+                  Account
+                </p>
+                <div class="flex flex-col gap-[16px]">
+                  <a
+                    href=""
+                    class="font-[400] text-[16px] leading-[24px] text-[#FAFAFA]"
+                    >My Account</a
+                  >
+                  <a
+                    href=""
+                    class="font-[400] text-[16px] leading-[24px] text-[#FAFAFA]"
+                    >Login / Register</a
+                  >
+                  <a
+                    href=""
+                    class="font-[400] text-[16px] leading-[24px] text-[#FAFAFA]"
+                    >Cart</a
+                  >
+                  <a
+                    href=""
+                    class="font-[400] text-[16px] leading-[24px] text-[#FAFAFA]"
+                    >Wishlist</a
+                  >
+                  <a
+                    href=""
+                    class="font-[400] text-[16px] leading-[24px] text-[#FAFAFA]"
+                    >Shop</a
+                  >
+                </div>
+              </div>
+              <!-- quick links -->
+              <div class="flex flex-col gap-[24px]">
+                <p class="font-[500] text-[20px] leading-[28px] text-[#FAFAFA]">
+                  Quick Link
+                </p>
+                <div class="flex flex-col gap-[16px]">
+                  <a
+                    href=""
+                    class="font-[400] text-[16px] leading-[24px] text-[#FAFAFA]"
+                    >Privacy Policy</a
+                  >
+                  <a
+                    href=""
+                    class="font-[400] text-[16px] leading-[24px] text-[#FAFAFA]"
+                    >Terms Of Use</a
+                  >
+                  <a
+                    href=""
+                    class="font-[400] text-[16px] leading-[24px] text-[#FAFAFA]"
+                    >FAQ</a
+                  >
+                  <a
+                    href=""
+                    class="font-[400] text-[16px] leading-[24px] text-[#FAFAFA]"
+                    >Contact</a
+                  >
+                </div>
+              </div>
+              <!-- download app -->
+              <div class="flex flex-col gap-[24px]">
+                <div class="flex flex-col gap-[24px]">
+                  <p
+                    class="font-[500] text-[20px] leading-[28px] text-[#FAFAFA]"
+                  >
+                    Download App
+                  </p>
+                  <div class="flex flex-col gap-[8px]">
+                    <p
+                      class="font-[500] text-[12px] leading-[18px] text-[#FAFAFA]"
+                    >
+                      Save $3 with App New User Only
+                    </p>
+                    <div class="flex items-center gap-[8px]">
+                      <img src="./assets/Qr Code.png" alt="" />
+                      <div class="flex flex-col gap-[4px]">
+                        <a href=""
+                          ><img src="./assets/GooglePlay.png" alt=""
+                        /></a>
+                        <a href=""
+                          ><img src="./assets/AppStore.png" alt=""
+                        /></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="flex gap-[24px]">
+                  <a href=""><img src="./assets/Icon-Facebook.png" alt="" /></a>
+                  <a href=""><img src="./assets/Icon-Twitter.png" alt="" /></a>
+                  <a href=""
+                    ><img src="./assets/icon-instagram.png" alt=""
+                  /></a>
+                  <a href=""><img src="./assets/Icon-Linkedin.png" alt="" /></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- copyright -->
+          <div
+            class="w-full h-[40px] opacity-[40%] flex justify-center items-center mt-[60px]"
+          >
+            <div class="flex mt-[16px]">
+              <img
+                class="max-w-[20px] h-[20px]"
+                src="./assets/icon-copyright.png"
+                alt=""
+              />
+              <p class="font-[400] text-[16px] leading-[24px] text-[#FFFFFF]">
+                Copyright Rimel 2022. All right reserved
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
