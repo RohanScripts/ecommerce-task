@@ -183,7 +183,7 @@ const productListing = () => {
 
         // add button
         const addButton = document.createElement("button")
-        addButton.className="md:w-[270px] opacity-50 hover:opacity-100 duration-300 sm:w-[200px] h-[41px] bg-[#000000] rounded-br-[4px] rounded-bl-[4px] flex justify-center items-center"
+        addButton.className="md:w-[270px] opacity-50 hover:opacity-100 duration-300 sm:w-[200px] h-[41px] bg-[#000000] flex justify-center items-center"
         cardUpper.appendChild(addButton)
  
         // storing to localStorage
@@ -198,7 +198,11 @@ const productListing = () => {
             }
             cart.push(eachProduct);
             localStorage.setItem("cart",JSON.stringify(cart))
-            console.log(JSON.parse(localStorage.getItem("cart")))
+            // console.log(JSON.parse(localStorage.getItem("cart")))
+
+            let count = JSON.parse(localStorage.getItem("cart"))
+            document.getElementById("cartBadge").innerText = count.length
+            console.log(count.length);
         })
 
           // add button image
@@ -235,3 +239,5 @@ const productListing = () => {
 
 productListing()
 
+let count = JSON.parse(localStorage.getItem("cart"))
+document.getElementById("cartBadge").innerText = count.length
